@@ -1,10 +1,16 @@
+## GaussianExample_2D.ipynb
+Example to use the OmniFold algorithm to do unfolding in 2D. Modified from the 1D example of https://github.com/hep-lbdl/OmniFold
+
+## Root files
 The root files neut_flattree.root and genie_flattree.root contain the MC events produced by the NEUT and GENIE generators respectively, after full MC simulation and event reconstruction in the ND280 detector.
 
 Variable type:
+
     I: integer
     F: float
 
 TTree:
+
     selectedEvents: reconstructed events
     - dptt_rec/F, dptt_truth/F, pN_rec/F, pN_truth/F, daT_rec/F, daT_truth/F: reconstructed and true TKI variables
     - cutBranch/I: 0 = signal sample, 1 = CC1pi+1pi- enriched sample, 2 = CC1pi+Xpi0 enriched sample, 3 = CC-other-Xpi0 enriched sample, 4 = CC-other-0pi0 enriched sample
@@ -22,3 +28,8 @@ TTree:
     - Enutrue/F: true neutrino energy
     - weight/F: event weight
     
+## Plot_TKI.ipynb
+Example to plot the TKI variables inside the root files, using the python uproot module
+
+## TKI_OmniFold.ipynb
+Working but obviously not optimal example to unfold the TKI variables
